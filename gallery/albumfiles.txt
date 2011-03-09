@@ -1,0 +1,14 @@
+# This file is created by JAlbum. It sets custom file filtering and ordering for this image directory.
+# Each row indicate a file and it's order. Files not listed here are added to the end of the album
+# Rows beginning with "-" indicate excluded files.
+# Rows containing a tab character indicate links, where the text before the tab is the logical file name
+# and the path to the right is the target path.
+# Note: This file allows absolute paths to files and directories in other locations and thereby
+# allows you to compile albums consisting of files from several different locations.
+
+Olimpiada Nationala de Fizica Craiova 2006	C:\Documents and Settings\Raul\Desktop\Olimpiada Nationala de Fizica Craiova 2006
+ONI 2008 Ploiesti	C:\Documents and Settings\Raul\Desktop\ONI 2008 Ploiesti
+Concursul de fizica creativa  Stefan Procopiu	C:\Documents and Settings\Raul\Desktop\Concursul de fizica creativa  Stefan Procopiu
+Olimpiada Nationala de Informatica Targoviste 2006	C:\Documents and Settings\Raul\Desktop\Olimpiada Nationala de Informatica Targoviste 2006
+Concursul National de Informatica Urmasii lui Moisil Iasi 2009	C:\Documents and Settings\Raul\Desktop\Concursul National de Informatica Urmasii lui Moisil Iasi 2009
+Sesiune Internationala	C:\Documents and Settings\Raul\Desktop\Sesiune Internationala

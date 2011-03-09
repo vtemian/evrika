@@ -1,0 +1,120 @@
+body {
+	font-family: Verdana, Arial, sans-serif;
+	font-size: 12px;
+	color: #222222;
+	margin: 0px;
+	padding: 0px;
+	background: #e4e4e4;
+}
+
+a:link {
+	text-decoration: none;
+ 	color: #222222;
+}
+
+a:visited {
+	text-decoration: none;
+	color: #222222;
+}
+
+a:hover {
+	text-decoration: none;
+	color: #a7dcf4;
+}
+
+.current {
+	font-weight: bold;
+	background-color: #CCE8FF;
+}
+
+.cthumb {
+	background-color: #ffffff;
+	border: 1px solid #ffffff;
+}
+
+.thumb {
+	background-color: #d8e3ed;
+	border: 1px solid #ffffff;
+}
+
+.image { border: 1px solid #aaaaaa;}
+a:link .image {  border-color: #aaaaaa;}
+a:visited .image {  border-color: #aaaaaa;}
+a:hover .image { border-color: #ffffff;}
+
+.mthumb { border: 1px solid #aaaaaa;}
+a:link .mthumb {  border-color: #aaaaaa;}
+a:visited .mthumb {  border-color: #aaaaaa;}
+a:hover .mthumb { border-color: #ffffff;}
+
+.slideImage { border-width: 8px; border: 8px solid; border-color: #ffffff;}
+a:link .slideImage { border-color: #ffffff;}
+a:visited .slideImage { border-color: #ffffff;}
+
+.title {
+	font-size: 120%;
+	font-weight: bold;
+	color: #000000;
+}
+
+.title a:link {
+	text-decoration: none;
+	color: #000000;
+}
+
+.title a:visited {
+	text-decoration: none;
+	color: #000000;
+}
+
+.title a:hover {
+	text-decoration: none;
+	color: #ffffff;
+}
+
+.infotable {
+	border: 1px solid #88a8ca;
+	border-collapse: collapse;
+}
+
+.infotable td {
+	border: 1px solid #88a8ca;
+}
+
+.infotable table {
+	border-collapse: separate;
+}
+
+.infotable table td {
+	border: 0px;
+}
+
+.dirname {
+	font-size: 100%;
+	font-weight: bold;
+	color: #888888;
+}
+
+.comment {
+	color: #222222;
+	font-weight: bold;
+	font-size: 100%;
+}
+
+.smalltxt {
+	color: #666666;
+	font-size: 90%;
+}
+
+.xsmalltxt {
+	color: #888888;
+	font-size: 80%;
+}
+
+.newlabel {
+	font-size: 70%;
+	font-weight: bold;
+	color: #FFFFFF;
+	background-color: #4488CC;
+}
+

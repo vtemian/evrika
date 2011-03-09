@@ -1,0 +1,116 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+
+<!-- Free version -->
+<!-- saved from url=(0014)about:internet -->
+<!-- saved from url=(0014)about:internet -->
+<head>
+<title>Galerie Foto</title>
+<meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+<meta name="Keywords" content="photo,album,gallery,Galerie Foto" />
+
+
+
+<script type="text/javascript">
+/* <![CDATA[ */
+
+function preventDefault(e) {
+	if (document.addEventListener) e.preventDefault();
+	else e.returnValue=false;
+	return false;
+}
+function keypress(e) {
+	if(typeof _jaWidgetFocus != 'undefined' && _jaWidgetFocus) return true;
+	if(!e) var e = window.event;
+	if(e.keyCode) keyCode = e.keyCode; 
+	else if(e.which) keyCode = e.which;
+	switch(keyCode) {
+		case 8: window.location="../"; return false; break;
+		
+		
+		case 63273: case 36: window.location="index.html"; return preventDefault(e); break;
+		case 63275: case 35: window.location="index.html"; return preventDefault(e); break;
+		
+	}
+	return true;
+}
+function setuplisteners() {
+	if (document.addEventListener) document.addEventListener('keypress',keypress,false);
+	else if (document.attachEvent) document.attachEvent('onkeydown',keypress);
+}
+up0 = new Image(31,31); up0.src = "res/up.gif";
+up1 = new Image(31,31); up1.src = "res/up1.gif";
+next0 = new Image(31,31); next0.src = "res/next.gif";
+next1 = new Image(31,31); next1.src = "res/next1.gif";
+prev0 = new Image(31,31); prev0.src = "res/prev.gif";
+prev1 = new Image(31,31); prev1.src = "res/prev1.gif";
+
+
+
+
+
+window.onload = function() {
+	setuplisteners();
+	
+};
+/* ]]> */
+</script>
+
+
+
+
+<link rel="stylesheet" type="text/css" href="res/styles.css" />
+
+<link rel="alternate" href="album.rss" type="application/rss+xml"/>
+</head>
+
+<body id="body">
+<div style="width: 650px; margin-left:auto; margin-right:auto; padding-bottom:10px; text-align:center;">
+<table style="height:54px;" align="center" cellspacing="0" cellpadding="0" border="0">
+<tr><td>
+<!-- Header of index pages -->
+<table style="width:650px;" cellspacing="0" cellpadding="0" border="0">
+<tr>
+
+  
+<td style="width:20px;">
+  <img style="border:0;" src="res/hdr_left.gif" alt="" /></td>
+<td style="text-align:left; background:transparent url(res/hdr_mid.gif); background-repeat: repeat-x; white-space:nowrap;" class="title"> Galerie Foto </td>
+<td style="width:20px;">
+  <img style="border:0;" src="res/hdr_right.gif" alt="" /></td>
+
+
+
+</tr></table>
+</td></tr></table>
+<br />
+
+
+
+
+
+
+<!-- Thumbnail images -->
+
+
+
+
+
+</div>
+<div id="jalbumwidgetcontainer"></div>
+<script type="text/javascript" charset="utf-8"><!--//--><![CDATA[//><!--
+_jaSkin = "Chameleon";
+_jaStyle = "Aqua_light.css";
+_jaVersion = "8.2.6";
+_jaLanguage = "en";
+_jaPageType = "index";
+_jaRootPath = ".";
+_jaUserName = "premius";
+var script = document.createElement("script");
+script.type = "text/javascript";
+script.src = "http://jalbum.net/widgetapi/load.js";
+document.getElementById("jalbumwidgetcontainer").appendChild(script);
+//--><!]]></script>
+
+</body>
+</html>
