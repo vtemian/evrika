@@ -1,0 +1,239 @@
+html {min-height: 100%;}
+
+* {
+	margin: 0;
+	padding: 0;
+}
+
+a {color: #666666;}
+a:hover {color: #b3b5b7;}
+
+body {
+	background: #71aaed url(img/bg1.png);
+	color: #444;
+	font: normal 62.5% Tahoma,sans-serif;
+}
+
+p,code,ul {padding-bottom: 1.2em;}
+
+li {list-style: none;}
+
+h1 {
+	font: normal 1.8em Tahoma,sans-serif;
+	margin-bottom: 4px;
+}
+
+code {
+	background: #FFF;
+	border: 1px solid #EEE;
+	border-left: 6px solid #C1CAD3;
+	color: #666;
+	display: block;
+	font: normal 1em Tahoma,sans-serif;
+	line-height: 1.6em;
+	margin-bottom: 12px;
+	padding: 8px 10px;
+	white-space: pre;
+}
+
+blockquote {
+	background: url(img/quote.gif) no-repeat;
+	display: block;
+	font-weight: bold;
+	padding-left: 28px;
+}
+
+h1,h2,h3 {padding-top: 6px;}
+
+/* misc */
+.clearer {clear: both;}
+
+.left {float: left;}
+
+.right {float: right;}
+
+/* structure */
+.container {
+	background: #fff;
+	font-size: 1.2em;
+	margin: 0 auto;
+	padding: 0 0px 0px;
+	border-left: 3px solid #d7d7d7;
+	border-right: 3px solid #d7d7d7;
+	border-bottom: 3px solid #d7d7d7;
+	width: 880px;
+}
+
+/* header */
+.top {
+	padding: 50px 0px 0;
+}
+
+/* title */
+.header {
+	background: #d7d7d7;
+	font-size: 1.2em;
+	height: 200px;
+	margin: 0 auto;
+	padding: 3px 3px 0px;
+	width: 880px;
+
+}
+.header .left, .header .right {
+	background: #A4A4A0;
+	color: #FFF;
+	height: 200px;	
+}
+.header .left {
+	background: #B3C2C7 url(img/banner.png) no-repeat;
+	font: normal 2.8em "Trebuchet MS",sans-serif;
+	line-height: 200px;
+	text-align: center;	
+	width: 880px;
+}
+.header .right {
+	overflow: auto;
+	width: 212px;
+}
+.header .right p,.header .right h2 {padding: 0 16px;}
+.header .right h2 {padding-top: 16px; font: normal 1.6em "Trebuchet MS",sans-serif;}
+
+/* navigation */
+.navigation {	
+	background: #D9E1E5 url(img/nav.gif);
+	border: 1px solid #DFEEF7;
+	border-color: #DFEEF7 #CFDEE7;
+	height: 41px;
+}
+.navigation a {
+	background: #D9E1E5 url(img/nav.gif);
+
+	color: #456;
+	display: block;
+	float: left;
+	font: bold 1.1em sans-serif;
+	line-height: 41px;
+	padding: 0 20px;
+	text-decoration: none;
+}
+.navigation a:hover {background-position: right bottom; color: #235; }
+.navigation ul {list-style: none;}
+.navigation ul li {float:left; position:relative; z-index:1000; border-right:solid 1px rgb(175,175,175);}
+.navigation ul li ul {display: none; border: none; margin-left:-30px; padding: 0px 30px 0px; } 
+.navigation ul li a {float:left; display:block; height:3.1em; line-height:3.1em; padding:0 16px 0 16px; text-decoration:none; font-weight:bold; color: rgb(100,100,100);}
+.navigation ul li:hover {width:auto;}
+.navigation table {position:absolute; z-index:999; top:0; left:0; border-collapse:collapse;}
+
+/*Non-IE6*/
+.navigation ul li:hover a {background: url(img/nav.gif); text-decoration:none;} 
+.navigation ul li:hover ul {display:block; position:absolute; z-index:998; top:3.0em; margin-top:0.1em; left:0;}
+.navigation ul li:hover ul li ul {display: none;}
+.navigation ul li:hover ul li a {display:block; width:10em; height:auto; line-height:1.3em; margin-left:-1px; padding:4px 16px 4px 16px; border-left:solid 1px rgb(175,175,175); border-bottom: solid 1px rgb(175,175,175); background-color:rgb(237,237,237); font-weight:normal; color:rgb(50,50,50);} 
+.navigation ul li:hover ul li a:hover {background-color:rgb(210,210,210); text-decoration:none;} /*Color subcells hovering mode*/
+
+/*IE6*/
+.navigation ul li a:hover {background-color:rgb(210,210,210); text-decoration:none;} 
+.navigation ul li a:hover ul {display:block; position:absolute;z-index:997; top:3.1em; t\op:3.0em; left:0; marg\in-top:0.1em;}
+.navigation ul li a:hover ul li a {display:block; w\idth:10em; height:1px; line-height:1.3em; padding:4px 16px 4px 16px; border-left:solid 1px rgb(175,175,175); border-bottom: solid 1px rgb(175,175,175); background-color:rgb(237,237,237); font-weight:normal; color:rgb(50,50,50);} 
+.navigation ul li a:hover ul li a ul {visibility:hidden; height:0px; width:0px; position:absolute; z-index: 997;}
+.navigation ul li a:hover ul li a:hover {background-color:rgb(210,210,210); text-decoration:none;} 
+
+.profil {
+	float: right;
+	overflow: hidden;
+	height: 41px;
+	margin-top: -15px;
+	padding-right: 15px;
+}
+.profil a{
+	background: none;
+}
+
+/* main */
+.main {
+	border-top: 4px solid #FFF;
+	margin: 0px auto;
+}
+/* sub navigation */
+.side {
+	float: left;
+	width: 180px;
+	padding-bottom: 10px;
+	padding-right: 10px;
+	padding-left: 10px;
+}
+.side h2 {
+	color: #5A5A43;
+	font-size: 1em;
+	line-height: 30px;
+	margin: 0;
+	padding-left: 12px;
+}
+.side ul {
+	padding: 0;
+	border-top: 1px solid #EAEADA;
+}
+.side li {border-bottom: 1px solid #EAEADA;}
+.side li a {
+	font-size: 1.1em;
+	color: #554;
+	display: block;
+	padding: 8px 0 8px 5%;
+	text-decoration: none;
+	width: 95%;
+}
+.side li a:hover {
+	background: #F0F0EB;
+	color: #654;	
+}
+.side .logout{
+	font-weight: bold;
+}
+.useri{float:left; width:400px; padding:0 17px 0px 0px !important /*Non-IE6*/; padding:0 12px 0px 0px /*IE6*/;}
+.useri form fieldset {float:left; border:none;}
+.useri label.mij  {float:left; width:160px; margin:0 0 0 0; font-size:120%;}
+.useri label.mic  {float:left; width:60px; margin:0 0 0 0; font-size:120%;}
+.useri label.mare  {float:left; width:410px; margin:0 0 0 0; font-size:100%;}
+.useri input.field {width:10.0em; border: none; padding:0.2em 0 0.2em 0; border:1px solid rgb(200,200,200); font-family:verdana,arial,sans-serif; font-size:120%; }
+.button {width:8.0em; padding:1px !important /*Non-IE6*/; padding:0 /*IE6*/; background:rgb(255,255,255); border:solid 1px rgb(150,150,150); text-align:center; font-family:verdana,arial,sans-serif; color:rgb(150,150,150); font-size:120%;}
+.button:hover {cursor:pointer; border:solid 1px rgb(80,80,80); background:rgb(220,220,220); color:rgb(80,80,80);}
+
+/* content */
+.content {
+	float: left;
+	margin: 10px 0;
+	padding-bottom: 10px;
+	padding-left: 10px;
+	width: 660px;
+	overflow: hidden;
+}
+.content img{
+	border: none;
+}
+.content .descr {
+	color: #664;
+	font-size: 0.9em;
+	margin-bottom: 6px;
+}
+.content li {
+	list-style: url(img/li.gif);
+	margin-left: 18px;
+}
+.content p {font-family: "Lucida Sans Unicode",sans-serif;}
+.content td{
+	padding-left: 5px;
+	padding-right: 5px;
+	border: 1px solid #b3b5b7;
+}
+.stiri{
+	width: 200px;
+	overflow: hidden;
+}
+/* footer */
+.footer {
+	background: url(img/bgfooter.jpg) repeat-x;
+	font: bold 1em sans-serif;
+	line-height: 39px;
+	text-align: center;
+}
+.footer a,.footer a:hover {color: #000;}
