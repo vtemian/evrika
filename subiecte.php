@@ -1,7 +1,6 @@
 <?php
 	session_start();
 	include_once "functii.php";
-	include_once "doc2html/LiveDocx/MailMerge.php";
 	connect(premius);
 	if(isset($_POST["submit"])){
         		if(isset($_POST['submit']))
@@ -62,7 +61,7 @@ theme_advanced_buttons4 : "insertlayer,moveforward,movebackward,absolute,|,style
 
 });
 </script>
-<title>Olimpiada Nationala de Chimie 2011</title>
+<title>Evrika</title>
 </head>
 
 <body>
@@ -95,7 +94,6 @@ theme_advanced_buttons4 : "insertlayer,moveforward,movebackward,absolute,|,style
          <li><a href="#">Organizare</a>
                <ul>
 				  <li><a href="org.php">Organizatori</a></li>	
-				  <li><a href="comisie.php?comisie=3">Comisia de organizare</a></li>
 				  <li><a href="sponsori.php">Sponsori</a></li>		
                   <li><a href="locati.php">Loca&#355;ii culturale</a></li>
                   <li><a href="centre.php?tip=1">Centre de cazare</a></li>
@@ -105,13 +103,11 @@ theme_advanced_buttons4 : "insertlayer,moveforward,movebackward,absolute,|,style
           
           <li><a href="#">Comisia</a>
                 <ul>
-				  <li><a href="comisie.php?comisie=1">Comisia central&#259;</a></li>
-                  <li><a href="comisie.php?comisie=5">Comisie proba teoreticã</a></li>
-                  <li><a href="comisie.php?comisie=4">Comisie proba practicã</a></li>
+				  <li><a href="comisie.php?comisie=1">Comisia na&#355ional&#259;</a></li>
+                  <li><a href="comisie.php?comisie=5">Comisie jude&#355ean&#259;</a></li>
                   
                 </ul>
            </li>
-      
 		   <?php 
 		   		if($_SESSION[rang]>0)echo '<li><a href="forum.php">Forum</a></li>';
 		   ?>
@@ -354,23 +350,21 @@ theme_advanced_buttons4 : "insertlayer,moveforward,movebackward,absolute,|,style
 				}
 						
 		}else{
-		//echo "<center><h2>Bun venit!<br /> Subiectele nu au fost postate!</h2></center>";
+		echo "<center><h2>Bun venit!<br /> Subiectele nu au fost postate!</h2></center>";
 			echo '
 				<table width="600px">
-				<tr><td align="center"><h2>Proba</h2></td><td align="center"><h2>Clasa</h2></td><td align="center"><h2>Subiect</h2></td><td align="center"><h2>Barem</h2></td></tr>
+				<tr><td align="center"><h2>Clasa</h2></td><td align="center"><h2>Subiect</h2></td><td align="center"><h2>Barem</h2></td></tr>
 			';
 			$k=0;
-			$query="SELECT * FROM subiecte WHERE proba='Proba teoretica' AND tip='subiect'";
+			$query="SELECT * FROM subiecte WHERE  tip='subiect'";
 			$result=mysql_query($query);
 			if($result){
 				while($row=mysql_fetch_array($result)){
-					$query="SELECT * FROM subiecte WHERE proba='Proba teoretica' AND tip='barem' AND tipcls='".$row[tipcls]."'";
+					$query="SELECT * FROM subiecte WHERE tip='barem' AND tipcls='".$row[tipcls]."'";
 					$rez=mysql_query($query);
 					$ro=mysql_fetch_array($rez);
-					if($k==0){
-						echo '<tr align="center"><td rowspan="5" align="center"><h3>Proba teoretic&#259;</h3></td><td><h3>'.$row[tipcls].'</h3></td><td align="center"><a href="'.$row[cale].'"><img src="img/jos.jpg" width="15" height="16" alt="" /></a><a href="'.$row[calehtml].'"><img src="img/viz.png" alt="" /></a></td><td align="center"><a href="'.$ro[cale].'"><img src="img/jos.jpg" width="15" height="16" alt="" /></a><a href="'.$ro[calehtml].'"><img src="img/viz.png" alt="" /></a></td></tr>';
-					}else
-						echo '<tr align="center"><td><h3>'.$row[tipcls].'</h3></td><td align="center"><a href="'.$row[cale].'"><img src="img/jos.jpg" width="15" height="16" alt="" /></a><a href="'.$row[calehtml].'"><img src="img/viz.png" alt=""/></a></td><td align="center"><a href="'.$ro[cale].'"><img src="img/jos.jpg" width="15" height="16" alt="" /></a><a href="'.$ro[calehtml].'"><img src="img/viz.png" alt="" /></a></td></tr>';
+					
+					echo '<tr align="center"><td><h3>'.$row[tipcls].'</h3></td><td align="center"><a href="'.$row[cale].'"><img src="img/jos.jpg" width="15" height="16" alt="" /></a><a href="'.$row[calehtml].'"><img src="img/viz.png" alt=""/></a></td><td align="center"><a href="'.$ro[cale].'"><img src="img/jos.jpg" width="15" height="16" alt="" /></a><a href="'.$ro[calehtml].'"><img src="img/viz.png" alt="" /></a></td></tr>';
 					$k++;
 				}
 			}else

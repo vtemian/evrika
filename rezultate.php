@@ -62,7 +62,7 @@ theme_advanced_buttons4 : "insertlayer,moveforward,movebackward,absolute,|,style
 
 });
 </script>
-<title>Olimpiada Nationala de Chimie 2011</title>
+<title>Evrika</title>
 </head>
 
 <body>
@@ -93,7 +93,6 @@ theme_advanced_buttons4 : "insertlayer,moveforward,movebackward,absolute,|,style
          <li><a href="#">Organizare</a>
                <ul>
 				  <li><a href="org.php">Organizatori</a></li>	
-				  <li><a href="comisie.php?comisie=3">Comisia de organizare</a></li>
 				  <li><a href="sponsori.php">Sponsori</a></li>		
                   <li><a href="locati.php">Loca&#355;ii culturale</a></li>
                   <li><a href="centre.php?tip=1">Centre de cazare</a></li>
@@ -103,9 +102,8 @@ theme_advanced_buttons4 : "insertlayer,moveforward,movebackward,absolute,|,style
           
           <li><a href="#">Comisia</a>
                 <ul>
-				  <li><a href="comisie.php?comisie=1">Comisia central&#259;</a></li>
-                  <li><a href="comisie.php?comisie=5">Comisie proba teoreticã</a></li>
-                  <li><a href="comisie.php?comisie=4">Comisie proba practicã</a></li>
+				  <li><a href="comisie.php?comisie=1">Comisia na&#355ional&#259;</a></li>
+                  <li><a href="comisie.php?comisie=5">Comisie jude&#355ean&#259;</a></li>
                   
                 </ul>
            </li>
@@ -361,7 +359,7 @@ theme_advanced_buttons4 : "insertlayer,moveforward,movebackward,absolute,|,style
 							echo '  <h2>Vizualizare</h2><br /><hr />
 							<table>
 								<tr>
-									<td></td><td></td><td>Nume</td><td>Prenume</td><td>Clasa</td><td>Nr.dip</td><td>S1</td><td>S2</td><td>S3</td><td>S4</td><td>Of</td><td>Teorie</td><td>Practica</td><td>Total</td><td>Premiu</td><td>Premiu special</td>
+									<td></td><td></td><td>Nume</td><td>Prenume</td><td>Clasa</td><td>Scoala</td><td>Punctaj</td><td>Premiu</td>
 								</tr>';
 								while($row=mysql_fetch_array($result)){
 									echo '<tr>
@@ -370,17 +368,9 @@ theme_advanced_buttons4 : "insertlayer,moveforward,movebackward,absolute,|,style
 											<td>'.$row[nume].'</td>
 											<td>'.$row[prenume].'</td>
 											<td>'.$row[cls].'</td>
-											<td>'.$row[nrdip].'</td>
-											<td>'.$row[s1].'</td>
-											<td>'.$row[s2].'</td>
-											<td>'.$row[s3].'</td>
-											<td>'.$row[s4].'</td>
-											<td>'.$row[of].'</td>
-											<td>'.$row[teorie].'</td>
-											<td>'.$row[practica].'</td>
+											<td>'.$row[scoala].'</td>
 											<td>'.$row[total].'</td>
 											<td>'.$row[premiu].'</td>
-											<td>'.$row[prspecial].'</td>
 										</tr>';
 								}
 								echo '</table><br />
@@ -410,19 +400,18 @@ theme_advanced_buttons4 : "insertlayer,moveforward,movebackward,absolute,|,style
 			}else{
 				//echo "<center><h2>Bun venit!<br /> Rezultatele nu au fost postate!</h2></center>";
 				if($_GET[cls]==''){
-				//echo '<a href="rezultate.php?cls=VIII">clasa VIII&nbsp;</a>&nbsp;<a href="rezultate.php?cls=IX">clasa IX&nbsp;</a>&nbsp;<a href="rezultate.php?cls=X">clasa X&nbsp;</a>&nbsp;<a href="rezultate.php?cls=XI">clasa XI&nbsp;</a>&nbsp;<a href="rezultate.php?cls=XII">clasa XII</a><br />';
-				echo '<table>';
+				echo '<div class="clasa"><a href="rezultate.php?cls=VIII">clasa VIII&nbsp;</a>&nbsp;<a href="rezultate.php?cls=IX">clasa IX&nbsp;</a>&nbsp;<a href="rezultate.php?cls=X">clasa X&nbsp;</a>&nbsp;<a href="rezultate.php?cls=XI">clasa XI&nbsp;</a>&nbsp;<a href="rezultate.php?cls=XII">clasa XII</a></div><br />';
+				/*echo '<table>';
 				echo '<tr><td><a href="fisiere/rezfinale.xls"><img src="img/jos.jpg" width="20" height="20" alt="" /></a></td><td><h2>Rezultatele finale</h2></td></tr>';
 				echo '<tr><td><a href="fisiere/LOT.doc"><img src="img/jos.jpg" width="20" height="20" alt="" /></a></td><td><h2>Lotul largit</h2></td></tr>';
 				
-				echo '</table>';
-				//$query="SELECT * FROM participanti,rezultate WHERE rezultate.id_elev=participanti.id GROUP BY participanti.judet";
-				$query="";
+				echo '</table>';*/
+				$query="SELECT * FROM participanti,rezultate WHERE rezultate.id_elev=participanti.id GROUP BY participanti.judet";
 				$result=mysql_query($query);
 				if($result){
-					/**echo '<br /><table width="600px">
-						<tr><td><h2>Jude&#355;</h2></td><td><h2>Nr. premii</h2></td><td><h2>Media punctaj</h2></td></tr>
-					';*/
+					echo '<br /><table width="600px">
+						<tr align="center"><td><h2>Jude&#355;</h2></td><td><h2>Nr. premii</h2></td></tr>
+					';
 					while($row=mysql_fetch_array($result)){
 						$query="SELECT rezultate.premiu FROM rezultate,participanti WHERE rezultate.id_elev=participanti.id AND participanti.judet='".$row[judet]."' AND rezultate.premiu='I'";
 						$re=mysql_query($query);
@@ -436,10 +425,10 @@ theme_advanced_buttons4 : "insertlayer,moveforward,movebackward,absolute,|,style
 						$query="SELECT rezultate.premiu FROM rezultate,participanti WHERE rezultate.id_elev=participanti.id AND participanti.judet='".$row[judet]."' AND rezultate.premiu='M'";
 						$re=mysql_query($query);
 						$men=mysql_num_rows($re);
-						echo '<tr><td><h3>'.$row[judet].'</h3></td><td><h5>Premii I:'.$unu.'<br />Premii II:'.$doi.'<br />Premii III:'.$trei.'<br />Mentiuni:'.$men.'</h5></td>';
+						echo '<tr align="center"><td><h3>'.$row[judet].'</h3></td><td><h5>Premii I:'.$unu.'<br />Premii II:'.$doi.'<br />Premii III:'.$trei.'<br />Mentiuni:'.$men.'</h5></td>';
 						//alta versiune alta viziune
 						//media punctajelor la proba practica+teoretica pe judete
-						$query="SELECT * FROM rezultate,participanti WHERE rezultate.id_elev=participanti.id AND participanti.judet='".$row[judet]."'";
+						/*$query="SELECT * FROM rezultate,participanti WHERE rezultate.id_elev=participanti.id AND participanti.judet='".$row[judet]."'";
 						$re=mysql_query($query);
 						$tot=mysql_num_rows($re);
 						$teorie=$practica=0;
@@ -450,38 +439,30 @@ theme_advanced_buttons4 : "insertlayer,moveforward,movebackward,absolute,|,style
 						}
 						
 						echo '<td><h5>Proba teoretica :'.$teorie/$tot.'<br />Proba practica :'.$practica/$tot.'</h5></td></tr>';
+					*/
 					}
 					echo '</table>';
-				}
-				
-				//	echo "<h2><center>Eroare la selectarea datelor<br /><a href='rezultate.php'>Ok</a></h2></center>";	
+				}else
+					echo "<h2><center>Eroare la selectarea datelor<br /><a href='rezultate.php'>Ok</a></h2></center>";	
 				}else{
-					//$query="SELECT * FROM participanti,rezultate WHERE rezultate.id_elev=participanti.id AND participanti.cls='".$_GET[cls]."'";
-					//echo $
-					
+					$query="SELECT * FROM participanti,rezultate WHERE rezultate.id_elev=participanti.id AND participanti.cls='".$_GET[cls]."'";
 				$result=mysql_query($query);
 				if($result){
-					echo '<h2>'.$_GET[cls].'</h2><a href="rezultate.php"><img src="img/goback.gif" width="30" height="20"></a><table>
-						<tr><td>Nume & prenume</td><td>Nr diplom&#259;</td><td>S1</td><td>S2</td><td>S3</td><td>S4</td><td>Of</td><td>Teorie</td><td>Practic&#259;</td><td>Total</td><td>Premiu</td><td>PrSpecial</td></tr>
+					echo '<h2>'.$_GET[cls].'</h2><a href="rezultate.php"><img src="img/goback.png" width="30" height="30"></a><div align="center"><table>
+						<tr><td>Nume & prenume</td><td>Scoala</td><td>Punctaj</td><td>Premiu</td></tr>
 					';
 					while($row=mysql_fetch_array($result)){
-						echo '<tr><td>'.$row[nume]." ".$row[prenume].'</td><td>'.$row[nrdip].'</td><td>'.$row[s1].'</td><td>'.$row[s2].'</td><td>'.$row[s3].'</td><td>'.$row[s4].'</td><td>'.$row[of].'</td><td>'.$row[teorie].'</td><td>'.$row[practica].'</td><td>'.$row[total].'</td><td>'.$row[premiu].'</td><td>'.$row[prspecial].'</td></tr>';	
+						echo '<tr><td>'.$row[nume]." ".$row[prenume].'</td><td>'.$row[scoala].'</td><td>'.$row[total].'</td><td>'.$row[premiu].'</td></tr>';	
 					}
-					echo '</table>';
+					echo '</table></div>';
 				}else
 					echo "<h2><center>Eroare la selectarea datelor<br /><a href='rezultate.php'>Ok</a></h2></center>";	
 				}	
 			}				
 		?>
-
-
-
 		</div>
-
 		<div class="clearer"><span></span></div>
-
 	</div>
-
 <div class="footer">&copy; 2011 Vlad T., Klaudia M., Raul B.</div>
 
 </div>

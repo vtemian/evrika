@@ -38,7 +38,7 @@ theme_advanced_buttons4 : "insertlayer,moveforward,movebackward,absolute,|,style
 
 });
 </script>
-<title>Olimpiada Nationala de Chimie 2011</title>
+<title>Evrika</title>
 </head>
 
 <body>
@@ -70,7 +70,6 @@ theme_advanced_buttons4 : "insertlayer,moveforward,movebackward,absolute,|,style
          <li><a href="#">Organizare</a>
                <ul>
 				  <li><a href="org.php">Organizatori</a></li>	
-				  <li><a href="comisie.php?comisie=3">Comisia de organizare</a></li>
 				  <li><a href="sponsori.php">Sponsori</a></li>		
                   <li><a href="locati.php">Loca&#355;ii culturale</a></li>
                   <li><a href="centre.php?tip=1">Centre de cazare</a></li>
@@ -80,9 +79,8 @@ theme_advanced_buttons4 : "insertlayer,moveforward,movebackward,absolute,|,style
           
           <li><a href="#">Comisia</a>
                 <ul>
-				  <li><a href="comisie.php?comisie=1">Comisia central&#259;</a></li>
-                  <li><a href="comisie.php?comisie=5">Comisie proba teoreticã</a></li>
-                  <li><a href="comisie.php?comisie=4">Comisie proba practicã</a></li>
+				  <li><a href="comisie.php?comisie=1">Comisia na&#355ional&#259;</a></li>
+                  <li><a href="comisie.php?comisie=5">Comisie jude&#355ean&#259;</a></li>
                   
                 </ul>
            </li>
@@ -169,130 +167,40 @@ theme_advanced_buttons4 : "insertlayer,moveforward,movebackward,absolute,|,style
 
 			<?php
 			if($_SESSION[rang]==3){
-					if(isset($_POST[submit])){
-						if($_FILES['fisier']['error']==0){
-							if($_FILES['fisier']['type']=='application/octet-stream'||$_FILES['fisier']['type']=='application/pdf'){
-								if($_FILES['fisier']['size']<700000){
-									if(trim($_POST[titlu])!=''){	
-										$uploaddir = getcwd().'/fisiere/';
-										$c_dip=$_FILES['fisier']['name'];
-										$c_dip1=$_FILES['fisier']['name'];
-										$uploadfile = $uploaddir.$c_dip1;
-										if (move_uploaded_file($_FILES['fisier']['tmp_name'],$uploadfile) && is_writable($uploadfile)){
-			
-												echo "<h2><center>Incarcare reusita : ".$c_dip."<br /></h2></center>";
-												$query="INSERT INTO regulament (titlu,cale) VALUES ('".mysql_escape_string($_POST[titlu])."','fisiere/".$c_dip."')";
-												$result=mysql_query($query);
-												if($result){
-													echo "<h2><center>Datele au fost introduse cu succes<br /><a href='regulament.php'>Ok</a></h2></center>";
-												}else
-													echo "<h2><center>FEroare la introducerea datelore<br /><a href='regulament.php'>Ok</a></h2></center>";
-										}
-										else{
-											echo "<h2><center>Eroare la upload ".$c_dip."<br /><a href='regulament.php'>Ok</a></h2></center>";
-										}
-									}else
-										echo "<h2><center>Fisierul trebuie sa aiba un titlu<br /><a href='regulament.php'>Ok</a></h2></center>";
-								}else
-										echo "<h2><center>Fisierul este prea mare<br /><a href='regulament.php'>Ok</a></h2></center>";
-							}else
-									{echo "<h2><center>Nu puteti sa incarcati acest tip de fisier<br /><a href='regulament.php'>Ok</a></h2></center>";
-									
-									}
-						}
-						else{
-							echo "<h2><center>Eroare la fisier<br /><a href='regulament.php'>Ok</a></h2></center>";
-						}
-						
-
-					}else{
-					if($_GET[sterge]==1){
-						$query="SELECT cale FROM regulament WHERE id='".mysql_escape_string($_GET[id])."'";
-						$rez=mysql_query($query);
-						if($rez){
-							$row=mysql_fetch_array($rez);
-							unlink($row[cale]);
-						$query="DELETE FROM regulament WHERE id='".mysql_escape_string($_GET[id])."'";
-						$result=mysql_query($query);
-						if($result){
-							echo "<h2><center>Datele au fost sterse cu succes<br /><a href='regulament.php'>Ok</a></h2></center>";
-						}else
-							echo "<h2><center>Eroare la stergerea datelor<br /><a href='regulament.php'>Ok</a></h2></center>";
-						}else
-							echo "<h2><center>Eroare la selectarea datelor<br /><a href='regulament.php'>Ok</a></h2></center>";
-					}else
-						if($_GET[sterge]==2){
-							if(isset($_POST[modifica])){
-								if(trim($_POST[titlu])!=''){
-									if(trim($_POST[calea])!=''){
-										$query="UPDATE regulament SET titlu='".mysql_escape_string($_POST[titlu])."',cale='".mysql_escape_string($_POST[calea])."' WHERE id='".mysql_escape_string($_GET[id])."'";
-										$result=mysql_query($query);
-										if($result){
-											echo "<h2><center>Datele au fost modificate cu succes<br /><a href='regulament.php'>Ok</a></h2></center>";
-										}else
-											echo "<h2><center>Eroare la modificarea datelor<br /><a href='regulament.php'>Ok</a></h2></center>";
-									}else
-										echo "<h2><center>Trebuie sa aveti o cale<br /><a href='regulament.php'>Ok</a></h2></center>";
-								}else
-									echo "<h2><center>Trebuie sa aveti un titlu<br /><a href='regulament.php'>Ok</a></h2></center>";
-							}else{
-								$query="SELECT * FROM regulament WHERE id='".$_GET[id]."'";
-								$result=mysql_query($query);
-								if($result){
-									$row=mysql_fetch_array($result);
-									echo '<div class="useri">
-									<form action="regulament.php?id='.$_GET[id].'&sterge=2" method="post">
-											<label class="mij">Titlu</label>
-											<input type="text" name="titlu" value="'.$row[titlu].'"><br />
-											<label class="mij">Cale</label>
-											<input type="text" name="calea" value="'.$row[cale].'"><br />
-											<input type="submit" name="modifica" value="Salveaza" class="button" />	
-										</form></div>';
-								}else
-									echo "<h2><center>Eroare la selectarea datelor<br /><a href='regulament.php'>Ok</a></h2></center>";
-							}
-						}else{
-					$query="SELECT * FROM regulament";
-					$result=mysql_query($query);
-					if($result){
-						echo '  <h2>Vizualizare</h2></ hr><br />
-							<table>
-								<tr><td></td><td></td><td>Ttilu</td><td>Calea</td></tr>';	
-						while($row=mysql_fetch_array($result)){
-							echo '<tr>  
-										<td><a href="regulament.php?id='.$row[id].'&sterge=2"><img src="img/edit.png"></a></td>
-										<td><a href="regulament.php?id='.$row[id].'&sterge=1"><img src="img/sterge.png"></a></td>
-										<td>'.$row[titlu].'</td>
-										<td>'.$row[cale].'</td>';										
-										echo '
-									</tr>';
-						}	
-						echo'		
-							</table>';
+				if(isset($_POST[submit])){
+					$query="UPDATE rebulament set reg='".$_POST[continut]."'";
+					if(mysql_query($query)){
+						echo "<h2><center>Regulamentul a fost schimbat<br /><a href='regulament.php'>Ok</a></h2></center>";
 					}else
 						echo "<h2><center>Eroare la selectarea datelor<br /><a href='regulament.php'>Ok</a></h2></center>";
-					echo '<h2>Adauga</h2><hr /><br /><div class="useri">
-						<form enctype="multipart/form-data" action="regulament.php" method="POST">
-							<table><tr><td style="border: none;"><h3>Titlu</h3></td><td style="border: none;"><input type="text" name="titlu" class="field" /></td></tr></table><br />
-							<table><tr><td style="border: none;"><h3>Fisier</h3></td><td style="border: none;"><input type="file" name="fisier" class="field" /></td></tr></table><br />
-							<input type="submit" name="submit" value="Trimite" class="field">
-						</form></div>';	
-					}
-				}	
-		}else{
-			$query="SELECT * FROM regulament";
-			$result=mysql_query($query);
-			if($result){
-				echo '<h1>Regulament</h1><hr /><br />';
-				echo '<table>';
-				while($row=mysql_fetch_array($result)){
-					echo '<tr><td><a href="'.$row[cale].'"><img src="img/jos.jpg" width="20" height="20" alt="" /></a></td><td><h4>'.$row[titlu].'</h4></td></tr>';
-				}
-				echo '</table>';
+					
+				}else{
+					$query="SELECT * FROM rebulament";
+					$result=mysql_query($query);
+					if($result){
+						echo '<h2>Regulament</h2><hr /><br />';
+						$row=mysql_fetch_array($result);
+						echo '<div class="useri">
+							<form action="regulament.php" method="post">
+								<textarea name="continut">'.$row['reg'].'</textarea>
+								<input type="submit" name="submit" value="Salveaza" class="button" />	
+							</form></div>';
+					}else
+						echo "<h2><center>Eroare la selectarea datelor<br /><a href='regulament.php'>Ok</a></h2></center>";
+					}	
 			}else{
-				echo "<h2><center>Eroare la selectarea datelor<br /><a href='regulament.php'>Ok</a></h2></center>";
-			}			
-		}				
+				$query="SELECT * FROM rebulament";
+				$result=mysql_query($query);
+				if($result){
+					echo '<h2>Regulament</h2><hr /><br />';
+					while($row=mysql_fetch_array($result)){
+						echo $row[reg];
+					}
+					
+				}else{
+					echo "<h2><center>Eroare la selectarea datelor<br /><a href='regulament.php'>Ok</a></h2></center>";
+				}			
+			}				
 			?>
 
 

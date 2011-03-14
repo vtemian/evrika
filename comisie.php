@@ -23,7 +23,7 @@
 <meta name="keywords" content="keywords"/> 
 <meta name="author" content="author"/> 
 <link rel="stylesheet" type="text/css" href="default.css" media="screen"/>
-<title>Olimpiada Nationala de Chimie 2011</title>
+<title>Evrika</title>
 </head>
 
 <body>
@@ -55,7 +55,6 @@
          <li><a href="#">Organizare</a>
                <ul>
 				  <li><a href="org.php">Organizatori</a></li>	
-				  <li><a href="comisie.php?comisie=3">Comisia de organizare</a></li>
 				  <li><a href="sponsori.php">Sponsori</a></li>		
                   <li><a href="locati.php">Loca&#355;ii culturale</a></li>
                   <li><a href="centre.php?tip=1">Centre de cazare</a></li>
@@ -63,11 +62,10 @@
                 </ul>
           </li>
           
-               <li><a href="#">Comisia</a>
+          <li><a href="#">Comisia</a>
                 <ul>
-				  <li><a href="comisie.php?comisie=1">Comisia central&#259;</a></li>
-                  <li><a href="comisie.php?comisie=5">Comisie proba teoreticã</a></li>
-                  <li><a href="comisie.php?comisie=4">Comisie proba practicã</a></li>
+				  <li><a href="comisie.php?comisie=1">Comisia na&#355ional&#259;</a></li>
+                  <li><a href="comisie.php?comisie=5">Comisie jude&#355ean&#259;</a></li>
                   
                 </ul>
            </li>
@@ -154,7 +152,7 @@
 		<?php
 		
 			if($_SESSION[rang]==3){
-			if($_GET[comisie]=='1'||$_GET[comisie]=='2'||$_GET[comisie]=='3'){
+			if($_GET[comisie]=='1'||$_GET[comisie]=='5'||$_GET[comisie]=='3'){
 				if(isset($_POST[submit])){
 					if(trim($_POST[nume])!=''){
 						if(trim($_POST[prenume])!=''){
@@ -257,11 +255,8 @@
 						else
 							echo '  <h2><a href="fisiere/comisie'.$_GET[comisie].'.doc"><img src="img/jos.jpg" width="20" height="20" alt="" /></a>Comisia ';
 						
-						if($_GET[comisie]==1)echo 'centrala';
-						if($_GET[comisie]==2)echo 'de coordonare';
-						if($_GET[comisie]==3)echo 'de organizare';
-						if($_GET[comisie]==4){echo 'proba practica';}
-						if($_GET[comisie]==5){echo 'proba teoretica';}
+						if($_GET[comisie]==1)echo 'nationala';
+						if($_GET[comisie]==5){echo 'judeteana';}
 						echo'</h2><hr /><br />
 							
 							<table width="600px">

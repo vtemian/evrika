@@ -1,7 +1,6 @@
 <?php
 	session_start();
 	include_once "functii.php";
-	include_once "doc2html/LiveDocx/MailMerge.php";
 	connect(premius);
 	if(isset($_POST["submit"])){
         		if(isset($_POST['submit']))
@@ -61,7 +60,7 @@ theme_advanced_buttons4 : "insertlayer,moveforward,movebackward,absolute,|,style
 
 });
 </script>
-<title>Olimpiada Nationala de Chimie 2011</title>
+<title>Evrika</title>
 </head>
 
 <body>
@@ -93,7 +92,6 @@ theme_advanced_buttons4 : "insertlayer,moveforward,movebackward,absolute,|,style
          <li><a href="#">Organizare</a>
                <ul>
 				  <li><a href="org.php">Organizatori</a></li>	
-				  <li><a href="comisie.php?comisie=3">Comisia de organizare</a></li>
 				  <li><a href="sponsori.php">Sponsori</a></li>		
                   <li><a href="locati.php">Loca&#355;ii culturale</a></li>
                   <li><a href="centre.php?tip=1">Centre de cazare</a></li>
@@ -103,9 +101,8 @@ theme_advanced_buttons4 : "insertlayer,moveforward,movebackward,absolute,|,style
           
           <li><a href="#">Comisia</a>
                 <ul>
-				  <li><a href="comisie.php?comisie=1">Comisia central&#259;</a></li>
-                  <li><a href="comisie.php?comisie=5">Comisie proba teoreticã</a></li>
-                  <li><a href="comisie.php?comisie=4">Comisie proba practicã</a></li>
+				  <li><a href="comisie.php?comisie=1">Comisia na&#355ional&#259;</a></li>
+                  <li><a href="comisie.php?comisie=5">Comisie jude&#355ean&#259;</a></li>
                   
                 </ul>
            </li>
@@ -194,42 +191,43 @@ theme_advanced_buttons4 : "insertlayer,moveforward,movebackward,absolute,|,style
 			if($_SESSION[rang]==3){
 			if(isset($_POST[trimite])){
 					if($_FILES['fisier']['error']==0){
-							//echo  $_FILES['fisier']['type'];
-							if($_FILES['fisier']['type']=='application/vnd.ms-excel'||$_FILES['fisier']['type']=='application/octet-stream'||$_FILES['fisier']['type']=='application/msword'){
+							echo  $_FILES['fisier']['type'];
+							if($_FILES['fisier']['type']=='application/vnd.ms-excel'||$_FILES['fisier']['type']=='application/octet-stream'||$_FILES['fisier']['type']=='text/csv'||$_FILES['fisier']['type']=='application/msword'){
 								if($_FILES['fisier']['size']<700000){
 										
 										$uploaddir = getcwd().'/fisiere/';
 										$c_dip=$_FILES['fisier']['name'];
 										$c_dip1=$_FILES['fisier']['name'];
 										if($_POST[tip]!="import")
-											$uploadfile = $uploaddir.'participanti'.'.xls';
+											$uploadfile = $uploaddir.'participanti'.'.csv';
 										else
 											$uploadfile = $uploaddir.$c_dip1;
 										if (move_uploaded_file($_FILES['fisier']['tmp_name'],$uploadfile) && is_writable($uploadfile)){
 											
 												echo "<h2><center>Incarcare reusita : ".$c_dip."<br /></h2></center>";
-											    if($_POST[tip]=="import"){
-												$fisier=fopen('fisiere/'.$c_dip,'r');
+												$c_dip=$uploadfile;
+												chmod($c_dip,0777);
+												echo 'ad';
+											    if($_POST[tip]!="import"){
+												$fisier=fopen($c_dip,'r');
 												$k=0;
 												while(!feof($fisier)){
 													$linie=fgets($fisier,40000);
 													$query='INSERT INTO participanti(nume,prenume,cls,scoala,judet,oras,profcoord) VALUES('.$linie.')';
-													//echo $query;
 													if($k!=0){
-													$result=mysql_query($query);
-													//echo $query.'<br />';
-													if(!$result){
-														$k++;
-													}else
-													{
-														$query="SELECT MAX(id_elev) AS max_id FROM rezultate";
-														$r=mysql_query($query);
-														$ro=mysql_fetch_array($r);
-														$maxid=$ro[max_id]+1;
-														$query="INSERT INTO rezultate (nrdip,s1,s2,s3,s4,of,teorie,practica,total,premiu,prspecial,id_elev) VALUES(NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,'".$maxid."')";
-														//echo $query;
-														$rez=mysql_query($query);
-													}
+														$result=mysql_query($query);
+														if(!$result){
+															$k++;
+														}else
+															{
+																$query="SELECT MAX(id_elev) AS max_id FROM rezultate";
+																$r=mysql_query($query);
+																$ro=mysql_fetch_array($r);
+																$maxid=$ro[max_id]+1;
+																$query="INSERT INTO rezultate (nrdip,s1,s2,s3,s4,of,teorie,practica,total,premiu,prspecial,id_elev) VALUES(NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,'".$maxid."')";
+																//echo $query;
+																$rez=mysql_query($query);
+															}
 													}else
 														$k++;
 												}	
@@ -315,7 +313,7 @@ theme_advanced_buttons4 : "insertlayer,moveforward,movebackward,absolute,|,style
 														//echo $query;
 														if($rez){
 															$row=mysql_fetch_array($rez);
-															$query="INSERT INTO participanti (nrdip,s1,s2,s3,s4,of,teorie,practica,total,premiu,prspecial,id_elev) VALUES (NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,'".$row[id]."')";
+															$query="INSERT INTO rezultate (nrdip,s1,s2,s3,s4,of,teorie,practica,total,premiu,prspecial,id_elev) VALUES (NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,'".$row[id]."')";
 															$re=mysql_query($query);
 															if($re){
 																echo "<h2><center>Datele au fost adugate cu succes<br /><a href='participanti.php'>Ok</a></h2></center>";
@@ -384,7 +382,7 @@ theme_advanced_buttons4 : "insertlayer,moveforward,movebackward,absolute,|,style
 							<input type="radio" name="tip" value="import" checked />
 							<label >Import&#259;</label><br />
 							<input type="radio" name="tip" value="up"/>
-							<label>Adaug&#259; fi&#351;ier cu participan&#355;i</label><br /><br />
+							<a href="fisiere/exemplu_participanti.csv"><label>Adaug&#259; fi&#351;ier cu participan&#355;i</label></a><br /><br />
 							<input type="file" name="fisier" value="Import" /><br /><br />
 							<input type="submit" name="trimite" value="Trimite" class="button" /><br />		
 							<h2>Ad&#259;ugare participant</h2><hr><br />
@@ -428,7 +426,7 @@ theme_advanced_buttons4 : "insertlayer,moveforward,movebackward,absolute,|,style
 				}
 				echo '</table></div>';
 				}else{
-					echo '<h2>'.$_GET[jud].'</h2><a href="participanti.php"><img src="img/goback.png" width="30" height="30"></a><table><div align="center">';
+					echo '<a href="participanti.php"><img src="img/goback.png" width="30" height="30"></a><h2>'.$_GET[jud].'</h2><table><div align="center">';
 					$jud=mysql_escape_string($_GET['jud']);
 					$query="SELECT * FROM participanti WHERE judet='".$jud."'";
 					$result=mysql_query($query);

@@ -12,7 +12,6 @@
                 $_SESSION=array();
                 session_destroy;
             }
-	require_once 'Zend/Loader.php';
 	require_once 'functii1.php';
 ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
@@ -47,7 +46,7 @@ theme_advanced_buttons4 : "insertlayer,moveforward,movebackward,absolute,|,style
 
 });
 </script>
-<title>Olimpiada Nationala de Chimie 2011</title>
+<title>Evrika</title>
 </head>
 
 <body>
@@ -79,7 +78,6 @@ theme_advanced_buttons4 : "insertlayer,moveforward,movebackward,absolute,|,style
          <li><a href="#">Organizare</a>
                <ul>
 				  <li><a href="org.php">Organizatori</a></li>	
-				  <li><a href="comisie.php?comisie=3">Comisia de organizare</a></li>
 				  <li><a href="sponsori.php">Sponsori</a></li>		
                   <li><a href="locati.php">Loca&#355;ii culturale</a></li>
                   <li><a href="centre.php?tip=1">Centre de cazare</a></li>
@@ -89,9 +87,8 @@ theme_advanced_buttons4 : "insertlayer,moveforward,movebackward,absolute,|,style
           
           <li><a href="#">Comisia</a>
                 <ul>
-				  <li><a href="comisie.php?comisie=1">Comisia central&#259;</a></li>
-                  <li><a href="comisie.php?comisie=5">Comisie proba teoreticã</a></li>
-                  <li><a href="comisie.php?comisie=4">Comisie proba practicã</a></li>
+				  <li><a href="comisie.php?comisie=1">Comisia na&#355ional&#259;</a></li>
+                  <li><a href="comisie.php?comisie=5">Comisie jude&#355ean&#259;</a></li>
                   
                 </ul>
            </li>
@@ -198,7 +195,7 @@ theme_advanced_buttons4 : "insertlayer,moveforward,movebackward,absolute,|,style
 										}
 										else
 											echo '<center><h2>Eroare la scrierea datelor in fisier<br /></h2></center>';
-										Zend_Loader::loadClass('Zend_Gdata');
+										/*Zend_Loader::loadClass('Zend_Gdata');
 										Zend_Loader::loadClass('Zend_Gdata_AuthSub');
 										Zend_Loader::loadClass('Zend_Gdata_ClientLogin');
 										Zend_Loader::loadClass('Zend_Gdata_HttpClient');
@@ -208,7 +205,7 @@ theme_advanced_buttons4 : "insertlayer,moveforward,movebackward,absolute,|,style
 										createEvent(Zend_Gdata_ClientLogin::getHttpClient('onc2011@gmail.com','onctm2011',Zend_Gdata_Calendar::AUTH_SERVICE_NAME), $_POST[continut],
 							   			'ONC 2011',
 							    		'Timisoara',
-							    		$s, '22:00', $_POST[data], '03:00', '+02' );
+							    		$s, '22:00', $_POST[data], '03:00', '+02' );*/
 									}else
 										echo '<center><h2>Eroare la introducerea datelor in tabel<br /><a href="program.php">Inapoi</a></h2></center>';
 								}else
@@ -314,9 +311,7 @@ $query="SELECT * FROM program ORDER BY ord ASC ";
 									</tr>';
 						}
 						echo '</table><br />
-
-<iframe src="http://www.google.com/calendar/embed?src=onc2011%40gmail.com&amp;ctz=Europe/Bucharest" style="border: 0" width="600" height="600" frameborder="0" scrolling="no"></iframe>';
-					}else
+<iframe src="http://www.google.com/calendar/embed?src=evrikatm2011%40gmail.com&ctz=Europe/Bucharest" style="border: 0" width="800" height="600" frameborder="0" scrolling="no"></iframe>';}else
 						echo '<center><h2>Eroare la selectarea datelor<br /><a href="program.php">Inapoi</a></h2></center>';
 }
 			?>

@@ -3,7 +3,7 @@
 //conectare la bd
 function connect($db1)
 {	$db="onc";
- 	$c = mysql_connect('localhost','vtemian','deschimbat');
+ 	$c = mysql_connect('localhost','root','seleus00');
 	if(!$c){
 		die('naspa'.mysql_error());}
 	$baza = mysql_select_db("$db",$c);

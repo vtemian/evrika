@@ -22,7 +22,12 @@ h1 {
 	font: normal 1.8em Tahoma,sans-serif;
 	margin-bottom: 4px;
 }
-
+.clasa{
+	border: 1px solid;
+    font-size: 18px;
+    height: 18px;
+    width: 404px;
+}
 code {
 	background: #FFF;
 	border: 1px solid #EEE;
@@ -140,15 +145,17 @@ h1,h2,h3 {padding-top: 6px;}
 
 .profil {
 	float: right;
-	overflow: hidden;
-	height: 41px;
-	margin-top: -15px;
-	padding-right: 15px;
+    height: 41px;
+    margin-top: -44px;
+    overflow: hidden;
+    padding-right: 0;
 }
 .profil a{
 	background: none;
 }
-
+.content img {
+	float: left;
+}
 /* main */
 .main {
 	border-top: 4px solid #FFF;

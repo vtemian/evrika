@@ -36,7 +36,7 @@
 		theme_advanced_buttons4 : "insertlayer,moveforward,movebackward,absolute,|,styleprops,spellchecker,|,cite,abbr,acronym,del,ins,attribs,|,visualchars,nonbreaking,template,blockquote,pagebreak,|,insertfile,insertimage"
 });
 </script>
-<title>Olimpiada Nationala de Chimie 2011</title>
+<title>Evrika</title>
 </head>
 <body>
 <div class="top">			
@@ -62,7 +62,6 @@
          <li><a href="#">Organizare</a>
                <ul>
 				  <li><a href="org.php">Organizatori</a></li>	
-				  <li><a href="comisie.php?comisie=3">Comisia de organizare</a></li>
 				  <li><a href="sponsori.php">Sponsori</a></li>		
                   <li><a href="locati.php">Loca&#355;ii culturale</a></li>
                   <li><a href="centre.php?tip=1">Centre de cazare</a></li>
@@ -72,9 +71,8 @@
           
           <li><a href="#">Comisia</a>
                 <ul>
-				  <li><a href="comisie.php?comisie=1">Comisia central&#259;</a></li>
-                  <li><a href="comisie.php?comisie=5">Comisie proba teoreticã</a></li>
-                  <li><a href="comisie.php?comisie=4">Comisie proba practicã</a></li>
+				  <li><a href="comisie.php?comisie=1">Comisia na&#355ional&#259;</a></li>
+                  <li><a href="comisie.php?comisie=5">Comisie jude&#355ean&#259;</a></li>
                   
                 </ul>
            </li>
@@ -161,53 +159,53 @@
 
 			<table>
 			<tr>
-					<td colspan='2'><h2>Catedrala Mitropolitanã a Banatului</h2></td>
+					<td colspan='2'><h2>Catedrala Mitropolitanï¿½ a Banatului</h2></td>
 				</tr>
 				<tr>
 					<td><img src="locatii/mitropolia.jpg" width="200" height="200" alt="" /></td>
 					<td> 	
 						 	
-Fa&#539;ã în fa&#539;ã cu clãdirea Operei, se înal&#539;ã edificiul Catedralei Mitropolitane a Banatului. Terenul pe care 
-se înal&#539;ã acest edificiu a fost mlã&#537;tinos &#537;i în vederea realizãrii funda&#539;iei sale, placa de beton, în 
-grosime de câ&#539;iva metri, a fost turnata având ca suport 1186 de piloni. Construc&#539;ia are o lungime de 63 de metri, 
-o lã&#539;ime de 32 de metri, iar turnul principal se înal&#539;ã la 83,7 metri, arhitectura sa fiind o combinatie 
-reu&#537;itã între stilul bizantin, elemente decorative asemãnãtoare cu cele ale moscheii Sfânta Sofia din 
-Constantinopol (azi Istambul) &#537;i elemente caracteristice bisericilor moldovene&#537;ti(Sfântul Gheorghe din Hârlãu), 
-acoperi&#537;urile turnurilor fiind acoperite cu plãci ceramice colorate; treptele, soclul edificiului, coloanele, 
-pilonii &#537;i elementele decorative de la u&#537;i &#537;i ferestre sunt cioplite din piatrã naturalã provenind 
+Fa&#539;ï¿½ ï¿½n fa&#539;ï¿½ cu clï¿½direa Operei, se ï¿½nal&#539;ï¿½ edificiul Catedralei Mitropolitane a Banatului. Terenul pe care 
+se ï¿½nal&#539;ï¿½ acest edificiu a fost mlï¿½&#537;tinos &#537;i ï¿½n vederea realizï¿½rii funda&#539;iei sale, placa de beton, ï¿½n 
+grosime de cï¿½&#539;iva metri, a fost turnata avï¿½nd ca suport 1186 de piloni. Construc&#539;ia are o lungime de 63 de metri, 
+o lï¿½&#539;ime de 32 de metri, iar turnul principal se ï¿½nal&#539;ï¿½ la 83,7 metri, arhitectura sa fiind o combinatie 
+reu&#537;itï¿½ ï¿½ntre stilul bizantin, elemente decorative asemï¿½nï¿½toare cu cele ale moscheii Sfï¿½nta Sofia din 
+Constantinopol (azi Istambul) &#537;i elemente caracteristice bisericilor moldovene&#537;ti(Sfï¿½ntul Gheorghe din Hï¿½rlï¿½u), 
+acoperi&#537;urile turnurilor fiind acoperite cu plï¿½ci ceramice colorate; treptele, soclul edificiului, coloanele, 
+pilonii &#537;i elementele decorative de la u&#537;i &#537;i ferestre sunt cioplite din piatrï¿½ naturalï¿½ provenind 
 de la Banpotoc.
 					</td></tr>
 				<tr>
 			<tr>
-					<td colspan='2'><h2>Opera Românã &#537;i Teatrul Na&#539;ional</h2></td>
+					<td colspan='2'><h2>Opera Romï¿½nï¿½ &#537;i Teatrul Na&#539;ional</h2></td>
 				</tr>
 				<tr>
 					<td><img src="locatii/opera.jpg" width="200" height="200" alt=""/></td>
 					<td>Teatrul din Timi&#537;oara
- a fost atestat documentar în anul 1735. Între anii 1761-1874, reprezenta&#539;iile
-					 se fãceau în clãdirea magistratului româno-sârb. Actuala clãdire a teatrului a fost construitã între
-					  anii 1872-1875, în stil renascentist. Clãdirea a fost distrusã în anul 1880, în urma unui incendiu
-					   devastator. În anul 1920 un alt incendiu a distrus teatrul, acesta fiind refãcut în 1923. Din punct
-					    de vedere arhitectonic, clãdirea este conceputã în stil bizantin cu influen&#539;e neoromâne&#537;ti. 
-					    În anii 1891 &#537;i 1896 au fost montate operele lui Mozart: "Rãpirea din Serai" respectiv "Flautul fermecat". În prezent
- clãdirea gãzduie&#537;te Opera Românã, Teatrul Na&#539;ional &#537;i Teatrul German.</td>
+ a fost atestat documentar ï¿½n anul 1735. ï¿½ntre anii 1761-1874, reprezenta&#539;iile
+					 se fï¿½ceau ï¿½n clï¿½direa magistratului romï¿½no-sï¿½rb. Actuala clï¿½dire a teatrului a fost construitï¿½ ï¿½ntre
+					  anii 1872-1875, ï¿½n stil renascentist. Clï¿½direa a fost distrusï¿½ ï¿½n anul 1880, ï¿½n urma unui incendiu
+					   devastator. ï¿½n anul 1920 un alt incendiu a distrus teatrul, acesta fiind refï¿½cut ï¿½n 1923. Din punct
+					    de vedere arhitectonic, clï¿½direa este conceputï¿½ ï¿½n stil bizantin cu influen&#539;e neoromï¿½ne&#537;ti. 
+					    ï¿½n anii 1891 &#537;i 1896 au fost montate operele lui Mozart: "Rï¿½pirea din Serai" respectiv "Flautul fermecat". ï¿½n prezent
+ clï¿½direa gï¿½zduie&#537;te Opera Romï¿½nï¿½, Teatrul Na&#539;ional &#537;i Teatrul German.</td>
 					</tr> 
 					<tr>
 					<td colspan='2'><h2>Domul romano-catolic</h2></td>
 				</tr>
 				<tr>
 					<td><img src="locatii/domul.jpg" width="200" height="200" alt=""/></td>
-					<td>Se presupunea cã domul a fost construit, având drept bazã planurile renumitului arhitect vienez 
+					<td>Se presupunea cï¿½ domul a fost construit, avï¿½nd drept bazï¿½ planurile renumitului arhitect vienez 
 					Josef Emanuel Fischer von Erlach (1693-1742), fiul nu mai pu&#539;in renumitului, la acea vreme, Johan 
-					Bernhard Fischer von Erlach. Într-un document din secolul al XVIII-lea, &#537;i anume "Wienerische Diarium" 
+					Bernhard Fischer von Erlach. ï¿½ntr-un document din secolul al XVIII-lea, &#537;i anume "Wienerische Diarium" 
 					se aminte&#537;te de a&#537;ezarea pietrei de temelie a Domului din Timi&#537;oara
- &#537;i totodatã, se men&#539;ioneazã cã planul de arhitecturã &#537;i construc&#539;ie a fost întocmit de H. Joh. Jacob Schelblauer -
+ &#537;i totodatï¿½, se men&#539;ioneazï¿½ cï¿½ planul de arhitecturï¿½ &#537;i construc&#539;ie a fost ï¿½ntocmit de H. Joh. Jacob Schelblauer -
   Consilier al ora&#537;ului Viena - (Innere - Stadt - Rath in Wien). Sediul episcopului diocezei romano-catolice a fost 
-  ini&#539;ial la Cenad, acesta fiind devastat de turci, s-a mutat la Szeghedin. În anul 1733, împaratul Carol al VI-lea, a 
+  ini&#539;ial la Cenad, acesta fiind devastat de turci, s-a mutat la Szeghedin. ï¿½n anul 1733, ï¿½mparatul Carol al VI-lea, a 
   mutat sediul la Timi&#537;oara
- episcop fiind în acel timp, Adalbert baron de Falkenstein. Datoritã acestui fapt s-a hotãrât construirea unei catedrale, 
+ episcop fiind ï¿½n acel timp, Adalbert baron de Falkenstein. Datoritï¿½ acestui fapt s-a hotï¿½rï¿½t construirea unei catedrale, 
  a unui palat episcopal &#537;i a unor case pentru canonici, ceea ce a dus la punerea pietrei de temelie a Domului la data de 6 
- august 1736. În 1773, Domul a fost terminat sub conducerea inginerilor Carl Alexander Steinlein &#537;i Johann Theodor Kostka.
+ august 1736. ï¿½n 1773, Domul a fost terminat sub conducerea inginerilor Carl Alexander Steinlein &#537;i Johann Theodor Kostka.
  </td>
 				</tr>
 				<tr>
@@ -216,27 +214,27 @@ de la Banpotoc.
 				<tr>
 					<td><img src="locatii/muzeu.jpg" width="200" height="200" alt=""/></td>
 					<td>Muzeul Banatului este un muzeu din Timi&#537;oara
- cu sediul central în Castelul Huniade. A fost înfiin&#539;at în 1872, sub numele de "Soietatea de Istorie &#537;i Arheologie". 
- Adãposte&#537;te cea mai importantã colec&#539;ie de obiecte arheologice din Banat. La parter, gãzduie&#537;te Sanctuarul Neolitic de la 
- Par&#539;a, un monument unic în Europa. Muzeul cuprinde Sec&#539;ia de istorie, Sec&#539;ia de Arheologie, Sec&#539;ia de Etnografie &#537;i Sec&#539;ia
+ cu sediul central ï¿½n Castelul Huniade. A fost ï¿½nfiin&#539;at ï¿½n 1872, sub numele de "Soietatea de Istorie &#537;i Arheologie". 
+ Adï¿½poste&#537;te cea mai importantï¿½ colec&#539;ie de obiecte arheologice din Banat. La parter, gï¿½zduie&#537;te Sanctuarul Neolitic de la 
+ Par&#539;a, un monument unic ï¿½n Europa. Muzeul cuprinde Sec&#539;ia de istorie, Sec&#539;ia de Arheologie, Sec&#539;ia de Etnografie &#537;i Sec&#539;ia
   de &#536;tiin&#539;ele Naturii. Muzeul are &#537;i un Laborator de restaurare &#537;i conservare a obiectelor din patrimoniul cultural &#537;i
-   istoric. În 1 ianuarie 2006, Sec&#539;ia de Artã s-a transformat în Muzeul de Art în Timi&#537;oara.
+   istoric. ï¿½n 1 ianuarie 2006, Sec&#539;ia de Artï¿½ s-a transformat ï¿½n Muzeul de Art ï¿½n Timi&#537;oara.
 					</td>
 					</tr>
 				</tr>
 				<tr>
-			<td colspan='2'><h2>Muzeul de Artã</h2></td>
+			<td colspan='2'><h2>Muzeul de Artï¿½</h2></td>
 				</tr>
 				<tr>
 					<td><img src="locatii/arta.jpg" width="200" height="200" alt=""/></td>
-					<td>Muzeul de Artã Timi&#537;oara este un muzeu de artã aflat în Palatul Baroc din Timi&#537;oara. 
-Muzeul a luat fiin&#539;ã dupa desprinderea sec&#539;iunii de artã a Muzeului Banatului, care a func&#539;ionat o perioadã într-o aripã 
-din actuala clãdire. Muzeul a devenit institu&#539;ie de sine stãtãtoare pe 1 ianuarie 2006, director fiind profesorul 
-universitar Marcel Tolcea. Odatã cu finalizarea unei bune par&#539;i din lucrãrile de restaurare a palatului &#537;i a spa&#539;iului 
+					<td>Muzeul de Artï¿½ Timi&#537;oara este un muzeu de artï¿½ aflat ï¿½n Palatul Baroc din Timi&#537;oara. 
+Muzeul a luat fiin&#539;ï¿½ dupa desprinderea sec&#539;iunii de artï¿½ a Muzeului Banatului, care a func&#539;ionat o perioadï¿½ ï¿½ntr-o aripï¿½ 
+din actuala clï¿½dire. Muzeul a devenit institu&#539;ie de sine stï¿½tï¿½toare pe 1 ianuarie 2006, director fiind profesorul 
+universitar Marcel Tolcea. Odatï¿½ cu finalizarea unei bune par&#539;i din lucrï¿½rile de restaurare a palatului &#537;i a spa&#539;iului 
 expozi&#539;ional, muzeul extins a putut fi inaugurat la 21 decembrie.
-Muzeul include o colec&#539;ie unicã de lucrãri &#537;i obiecte personale ale pictorului Corneliu Baba, cu 90 de piese.
- Alte 3 sec&#539;iuni includ colec&#539;iile de artã contemporanã, decorativã &#537;i europeanã. În patrimoniul muzeului se mai gãsesc 
- colec&#539;ii de picturã romãneascã, bãnã&#539;eanã &#537;i pictura religioasã, acestea momentan nu sunt expuse din lipsa de spa&#539;iu. 
+Muzeul include o colec&#539;ie unicï¿½ de lucrï¿½ri &#537;i obiecte personale ale pictorului Corneliu Baba, cu 90 de piese.
+ Alte 3 sec&#539;iuni includ colec&#539;iile de artï¿½ contemporanï¿½, decorativï¿½ &#537;i europeanï¿½. ï¿½n patrimoniul muzeului se mai gï¿½sesc 
+ colec&#539;ii de picturï¿½ romï¿½neascï¿½, bï¿½nï¿½&#539;eanï¿½ &#537;i pictura religioasï¿½, acestea momentan nu sunt expuse din lipsa de spa&#539;iu. 
  Parterul este dedicat expozi&#539;iilor temporare.</td>
 					</tr>
 				

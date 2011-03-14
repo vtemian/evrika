@@ -36,7 +36,7 @@
 		theme_advanced_buttons4 : "insertlayer,moveforward,movebackward,absolute,|,styleprops,spellchecker,|,cite,abbr,acronym,del,ins,attribs,|,visualchars,nonbreaking,template,blockquote,pagebreak,|,insertfile,insertimage"
 });
 </script>
-<title>Olimpiada Nationala de Chimie 2011</title>
+<title>Evrika</title>
 </head>
 <body>
 <div class="top">			
@@ -62,7 +62,6 @@
          <li><a href="#">Organizare</a>
                <ul>
 				  <li><a href="org.php">Organizatori</a></li>	
-				  <li><a href="comisie.php?comisie=3">Comisia de organizare</a></li>
 				  <li><a href="sponsori.php">Sponsori</a></li>		
                   <li><a href="locati.php">Loca&#355;ii culturale</a></li>
                   <li><a href="centre.php?tip=1">Centre de cazare</a></li>
@@ -72,9 +71,8 @@
           
           <li><a href="#">Comisia</a>
                 <ul>
-				  <li><a href="comisie.php?comisie=1">Comisia central&#259;</a></li>
-                  <li><a href="comisie.php?comisie=5">Comisie proba teoreticã</a></li>
-                  <li><a href="comisie.php?comisie=4">Comisie proba practicã</a></li>
+				  <li><a href="comisie.php?comisie=1">Comisia na&#355ional&#259;</a></li>
+                  <li><a href="comisie.php?comisie=5">Comisie jude&#355ean&#259;</a></li>
                   
                 </ul>
            </li>
@@ -83,20 +81,21 @@
 		   		if($_SESSION[rang]>0)echo '<li><a href="forum.php">Forum</a></li>';
 		   ?>
 		   <li><a href="infoutile.php">Informa&#355;ii utile</a></li>
-		   <li><a href="http://onc2011.jalbum.net/ONC-2011/">Galerie foto</a></li></ul>
+		   <li><a href="http://onc2011.jalbum.net/ONC-2011/">Galerie foto</a></li>
 			
-	<div class="profil">
-		<a href="http://www.facebook.com/profile.php?id=100001577365622&amp;ref=ts" title="Facebook" style="border-right: none; margin-right: -30px;"><img style="border: none; padding-top: 5px; margin-right: 0px;" src="img/facebook.png" width="35" height="35" alt="facebook" /></a>
-		<a href="http://www.twitter.com/@onc2011" title="Twitter" style="border-right: none; margin-right: -30px;"><img style="border: none; padding-top: 5px;" src="img/twitter.png" width="35" height="35" alt="twitter" /></a>		
-		<?php 	if($_SESSION[rang]==1)
-					echo '<a href="profil.php" title="Profil" style="border-right: none; margin-right: -30px;"><img style="border: none; border-right: 0px; padding-top: 5px; margin-right: 0px;" src="img/elev.png" width="35" height="35" /></a><a href="profil.php" title="Profil" >Profil</a>';
-				if($_SESSION[rang]==2)
-					echo '<a href="profil.php" title="Profil" style="border-right: none;margin-right: -30px;"><img style="border: none; padding-top: 5px; margin-right: 0px;" src="img/prof.gif" width="35" height="35" /></a><a href="profil.php" title="Profil" >Profil</a>';
-				if($_SESSION[rang]==3)
-					echo '<a href="profil.php" title="Profil" style="border-right: none;margin-right: -30px;"><img style="border: none;  border-right: 0px;padding-top: 5px; margin-right: 0px;" src="img/admin copy.gif" width="35" height="35" /></a><a href="profil.php" title="Profil" >Profil</a>';
-				
-		?>
-	</div>
+		<div class="profil">
+			<a href="http://www.facebook.com/profile.php?id=100001577365622&amp;ref=ts" title="Facebook" style="border-right: none; margin-right: -30px;"><img style="border: none; padding-top: 5px; margin-right: 0px;" src="img/facebook.png" width="35" height="35" alt="facebook" /></a>
+			<a href="http://www.twitter.com/@onc2011" title="Twitter" style="border-right: none; margin-right: -30px;"><img style="border: none; padding-top: 5px;" src="img/twitter.png" width="35" height="35" alt="twitter" /></a>		
+			<?php 	if($_SESSION[rang]==1)
+						echo '<a href="profil.php" title="Profil" style="border-right: none; margin-right: -30px;"><img style="border: none; border-right: 0px; padding-top: 5px; margin-right: 0px;" src="img/elev.png" width="35" height="35" /></a><a href="profil.php" title="Profil" >Profil</a>';
+					if($_SESSION[rang]==2)
+						echo '<a href="profil.php" title="Profil" style="border-right: none;margin-right: -30px;"><img style="border: none; padding-top: 5px; margin-right: 0px;" src="img/prof.gif" width="35" height="35" /></a><a href="profil.php" title="Profil" >Profil</a>';
+					if($_SESSION[rang]==3)
+						echo '<a href="profil.php" title="Profil" style="border-right: none;margin-right: -30px;"><img style="border: none;  border-right: 0px;padding-top: 5px; margin-right: 0px;" src="img/admin copy.gif" width="35" height="35" /></a><a href="profil.php" title="Profil" >Profil</a>';
+					
+			?>
+		</div>
+	</ul>
 		<div class="clearer"><span></span></div>
 </div>
 
@@ -223,10 +222,10 @@
 &#351i metodice. Fiecare dintre dumneavoastr&#259 s-a angajat &#238ntr-o competi&#355ie sever&#259, nu doar cu ceilal&#355i, ci mai ales cu sinele,
  dep&#259&#351indu-l, escalad&#226nd frontierele obi&#351nuite ale efortului, ale originalit&#259&#355ii &#351i ale creativit&#259&#355ii.</[>
 <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Inspectoratul &#350colar Jude&#355ean Timi&#351, unit&#259&#355ile &#351colare &#351i profesorii de chimie din jude&#355 implica&#355i &#238n desf&#259urarea
- olimpiadei, se str&#259duiesc ca acest eveniment de rezonan&#355&#259 pentru jude&#355ul nostru sã se desf&#259&#351oare la cote de exigen&#355&#259 
+ olimpiadei, se str&#259duiesc ca acest eveniment de rezonan&#355&#259 pentru jude&#355ul nostru sï¿½ se desf&#259&#351oare la cote de exigen&#355&#259 
  maxim&#259.</p>
 <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;V&#259 urez succes &#351i s&#259 profita&#355i din plin de oportunit&#259&#355ile oferite cu ocazia olimpiadei &#238n ora&#351ul de pe malurile r&#226ului
- Bega, sã nu renun&#355a&#355i niciodat&#259 la visele voastre, s&#259 men&#355ine&#355i ve&#351nic aprins&#259 &#238n suflete flac&#259ra olimpic&#259, s&#259 crede&#355i 
+ Bega, sï¿½ nu renun&#355a&#355i niciodat&#259 la visele voastre, s&#259 men&#355ine&#355i ve&#351nic aprins&#259 &#238n suflete flac&#259ra olimpic&#259, s&#259 crede&#355i 
  &#351i s&#259 lupta&#355i pentru &#238mplinirea motto-ului olimpic: &#8220;Citius, altius, fortius!&#8221;, &#8220;Mai rapid, mai sus, 
  mai puternic!&#8221;</p></h4>
   <h3><p>Inspector &#351colar general, <br />
